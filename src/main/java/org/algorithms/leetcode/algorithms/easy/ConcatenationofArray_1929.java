@@ -13,8 +13,4 @@ public class ConcatenationofArray_1929 {
         }
         return ans;
     }
-
-    public static void main(String[] args) {
-        System.out.println(Arrays.toString(getConcatenation(new int[]{1, 2, 3, 4, 5, 6})));
-    }
 }
