@@ -1,4 +1,4 @@
-package org.algorithms.leetcode.algorithms.easy;
+package org.algorithms.Leetcode.algorithms.easy;
 
 public class MaximumNumberofWordsFoundinSentences_2114 {
     public int mostWordsFound(String[] sentences) {

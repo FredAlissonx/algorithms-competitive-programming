@@ -1,6 +1,4 @@
-package org.algorithms.leetcode.algorithms.easy;
-
-import java.util.Arrays;
+package org.algorithms.Leetcode.algorithms.easy;
 
 public class ConcatenationofArray_1929 {
     public static int[] getConcatenation(int[] nums) {

@@ -1,4 +1,4 @@
-package org.algorithms.leetcode.algorithms.easy;
+package org.algorithms.Leetcode.algorithms.easy;
 
 public class FinalValueofVariableAfterPerformingOperations_2011 {
     public int finalValueAfterOperations(String[] operations) {

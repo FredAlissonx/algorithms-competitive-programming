@@ -1,4 +1,4 @@
-package org.algorithms.leetcode.algorithms.easy;
+package org.algorithms.Leetcode.algorithms.easy;
 
 public class TruncateSentence_1816 {
     public String truncateSentence(String s, int k) {
