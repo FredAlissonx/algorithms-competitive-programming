@@ -1,4 +1,4 @@
-package org.algorithms.HackerRank.easy;
+package org.algorithms.Leetcode.algorithms.easy;
 
 public class BuildArrayfromPermutation_1920 {
     public int[] buildArray(int[] nums) {
