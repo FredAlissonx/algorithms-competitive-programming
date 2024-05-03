@@ -1,4 +1,4 @@
-package org.algorithms.beecrowd.Beginner.Sequentials;
+package org.algorithms.Beecrowd.Beginner.Sequentials;
 
 import java.io.IOException;
 import java.util.Scanner;
