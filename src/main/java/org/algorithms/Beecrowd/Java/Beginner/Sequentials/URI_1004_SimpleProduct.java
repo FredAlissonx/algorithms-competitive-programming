@@ -1,4 +1,4 @@
-package org.algorithms.beecrowd.Beginner.Sequentials;
+package org.algorithms.Beecrowd.Beginner.Sequentials;
 import java.util.Scanner;
 public class URI_1004_SimpleProduct {
     public static void main(String[] args) {
