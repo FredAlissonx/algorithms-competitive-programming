@@ -1,4 +1,4 @@
-package org.algorithms.beecrowd.Beginner.Repetition;
+package org.algorithms.Beecrowd.Beginner.Repetition;
 
 import java.io.IOException;
 import java.util.Scanner;
