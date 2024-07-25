@@ -1,18 +1,16 @@
-WITH cte AS (
+WITH card_launch AS (
   SELECT
     card_name,
     issued_amount,
-    DENSE_RANK() OVER(
-      PARTITION BY card_name
-      ORDER BY issue_year, issue_month
-    ) AS rk
+    MAKE_DATE(issue_year, issue_month, 1) AS issue_date,
+    MIN(MAKE_DATE(issue_year, issue_month, 1)) OVER (
+      PARTITION BY card_name) AS launch_date
   FROM monthly_cards_issued
 )
+
 SELECT
   card_name,
-  SUM(issued_amount) AS issued_amount
-FROM cte
-WHERE rk = 1
-GROUP BY
-  card_name
+  issued_amount
+FROM card_launch
+WHERE issue_date = launch_date
 ORDER BY issued_amount DESC;
