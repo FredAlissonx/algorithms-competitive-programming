@@ -13,4 +13,5 @@ SELECT
   SUM(CASE WHEN row_number % 2 != 0 THEN measurement_value END) AS odd_sum,
   SUM(CASE WHEN row_number % 2 = 0 THEN measurement_value END) AS even_sum
 FROM getDay
-GROUP BY measurement_time;
+GROUP BY measurement_time
+;
