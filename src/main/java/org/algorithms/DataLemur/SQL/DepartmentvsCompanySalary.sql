@@ -15,4 +15,4 @@ SELECT
 FROM salary AS sa
 INNER JOIN employee AS em ON sa.employee_id = em.employee_id
 WHERE sa.payment_date = '03/31/2024 00:00:00'
-GROUP BY em.department_id, sa.payment_date;
+GROUP BY em.department_id, sa.payment_date
