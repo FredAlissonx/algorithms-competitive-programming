@@ -21,12 +21,14 @@ department_salaries = db_employee.join(
     )
 
 expression = """
-    SUM(
+    ABS(
+        SUM(
         CASE
             WHEN department_id = 1 THEN -salary_department
             ELSE salary_department
         END
-    ) AS salary_difference
+        )
+    )  AS salary_difference
 """
 db_employee = department_salaries.selectExpr(expression)
 
