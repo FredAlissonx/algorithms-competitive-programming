@@ -5,7 +5,7 @@ from pyspark.sql.window import Window
 
 # Start writing code
 window_spec = Window.partitionBy("company_name").orderBy("year")
-df_1 = car_launches.groupBy("company_name", "year") \
+df_1 = car_launches.filter(col("year").isin([2019, 2020])).groupBy("company_name", "year") \
     .agg(count("product_name").alias("quantity"))
 
 car_launches = df_1.withColumn(
