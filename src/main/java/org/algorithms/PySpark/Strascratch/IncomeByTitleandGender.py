@@ -14,12 +14,12 @@ employee_bonus = sf_employee.join(
         how="inner"
     ) \
     .withColumn(
-        "total_compesation",
+        "total_compensation",
         col("salary") + col("bonus")
         )
 
 result_df = employee_bonus.groupBy("employee_title", "sex") \
-    .agg(avg("total_compesation").alias("avg_total_comp"))
+    .agg(avg("total_compensation").alias("avg_total_comp"))
 
 # To validate your solution, convert your final pySpark df to a pandas df
 result_df.toPandas()
