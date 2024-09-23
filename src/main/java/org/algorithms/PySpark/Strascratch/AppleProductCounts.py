@@ -11,8 +11,7 @@ result_df = joined_df.groupBy("language") \
     .agg(
         F.countDistinct(F.when(F.col("device").isin(apple_prd), F.col("user_id"))).alias("n_apple_users"),
         F.countDistinct("user_id").alias("n_total_users")
-    ) \
-    .orderBy(F.col("n_total_users").desc())
+    )
 
 # Convert the result to a pandas DataFrame for validation
 result_df.toPandas()
