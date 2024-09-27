@@ -6,8 +6,8 @@ songs_top_rank = spotify_worldwide_daily_song_ranking \
     .groupBy("trackname") \
     .agg(
         F.sum(
-            F.when(F.col("position") == 1, 1)
-            .otherwise(0)
+           F.when(F.col("position") == 1, 1)
+           .otherwise(0)
         ).alias("times_top1")
     ) \
     .filter(F.col("times_top1") != 0) \
