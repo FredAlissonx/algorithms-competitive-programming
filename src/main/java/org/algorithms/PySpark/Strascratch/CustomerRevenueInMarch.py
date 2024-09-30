@@ -10,7 +10,7 @@ result_df = march_order \
     .groupBy("cust_id") \
     .agg(
         F.sum(F.col("total_order_cost")).alias("revenue")
-    )
-
+    ) \
+    .orderBy(F.col("revenue").desc())
 # To validate your solution, convert your final pySpark df to a pandas df
 result_df.toPandas()
