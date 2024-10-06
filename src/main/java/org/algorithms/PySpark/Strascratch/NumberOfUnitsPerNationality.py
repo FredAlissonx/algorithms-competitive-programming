@@ -17,5 +17,5 @@ result_df = airbnb_hosts_units \
     .agg(count("*").alias("apartment_count")) \
     .orderBy(col("apartment_count").desc())
 
-# To validate your solution, convert your final pySpark df to a pandas df
+#To validate your solution, convert your final pySpark df to a pandas df
 result_df.toPandas()
