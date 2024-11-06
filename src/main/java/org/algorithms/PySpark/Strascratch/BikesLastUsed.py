@@ -2,6 +2,7 @@
 from pyspark.sql.functions import max, col
 
 # Start writing code
+
 bike_last_use = dc_bikeshare_q1_2012.groupBy("bike_number") \
     .agg(max("end_time").alias("last_used"))
 
