@@ -10,8 +10,7 @@ prime_batch AS (
   SELECT
     item_type,
     total_square_footage,
-    FLOOR(500000 / total_square_footage) AS prime_item_batch_count,
-    (FLOOR(500000 / total_square_footage) * count_square) AS prime_item_count
+    FLOOR(500000 / total_square_footage) AS prime_item_batch_count
   FROM general_footage
   WHERE item_type = 'prime_eligible'
 )
